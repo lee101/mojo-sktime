@@ -73,10 +73,10 @@ not projections.
 
 | Case | mojo-sktime | sktime | Relative result |
 |---|---:|---:|---:|
-| PAA frames=128 (100k points) | 0.2 ms | 134.9 ms | 641.40x faster |
-| SAX word=128 alphabet=8 (100k points) | 0.9 ms | 160.1 ms | 183.40x faster |
-| KNN Euclidean predict (80x16, 48) | 1.1 ms | 64.9 ms | 60.96x faster |
-| KNN DTW predict (80x16, 48) | 21.8 ms | 9,474.2 ms | 434.74x faster |
+| PAA frames=128 (100k points) | 0.3 ms | 141.5 ms | 522.73x faster |
+| SAX word=128 alphabet=8 (100k points) | 0.6 ms | 148.6 ms | 257.44x faster |
+| KNN Euclidean predict (80x16, 48) | 0.5 ms | 52.9 ms | 105.35x faster |
+| KNN DTW predict (80x16, 48) | 18.0 ms | 8,746.5 ms | 485.46x faster |
 
 Benchmark scale and hardware matter. In particular, this port does not use
 multithreaded BLAS, and different workloads may favor upstream sktime. The
